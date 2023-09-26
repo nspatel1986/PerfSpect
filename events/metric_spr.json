@@ -129,16 +129,16 @@
         "origin": "perfspect"
     },
     {
-        "name": "metric_memory bandwidth read (MB/sec)",
-        "expression": "([UNC_M_CAS_COUNT.RD] * 64 / 1000000) / 1"
+        "name": "metric_memory bandwidth read (Gbps)",
+        "expression": "([UNC_M_CAS_COUNT.RD] * 64 * 8E-9) / 1"
     },
     {
-        "name": "metric_memory bandwidth write (MB/sec)",
-        "expression": "([UNC_M_CAS_COUNT.WR] * 64 / 1000000) / 1"
+        "name": "metric_memory bandwidth write (Gbps)",
+        "expression": "([UNC_M_CAS_COUNT.WR] * 64 * 8E-9) / 1"
     },
     {
-        "name": "metric_memory bandwidth total (MB/sec)",
-        "expression": "(([UNC_M_CAS_COUNT.RD] + [UNC_M_CAS_COUNT.WR]) * 64 / 1000000) / 1"
+        "name": "metric_memory bandwidth total (Gbps)",
+        "expression": "(([UNC_M_CAS_COUNT.RD] + [UNC_M_CAS_COUNT.WR]) * 64 * 8E-9) / 1"
     },
     {
         "name": "metric_LLC code read MPI (demand+prefetch)",
@@ -215,12 +215,12 @@
         "expression": "([UNC_CHA_CLOCKTICKS] / ([CHAS_PER_SOCKET] * [SOCKET_COUNT]) / 1000000000) / 1"
     },
     {
-        "name": "metric_IO_bandwidth_disk_or_network_writes (MB/sec)",
-        "expression": "([UNC_CHA_TOR_INSERTS.IO_PCIRDCUR] * 64 / 1000000) / 1"
+        "name": "metric_IO_bandwidth_disk_or_network_reads (Gbps)",
+        "expression": "([UNC_CHA_TOR_INSERTS.IO_PCIRDCUR] * 64 * 8E-9) / 1"
     },
     {
-        "name": "metric_IO_bandwidth_disk_or_network_reads (MB/sec)",
-        "expression": "(([UNC_CHA_TOR_INSERTS.IO_ITOM] + [UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR]) * 64 / 1000000) / 1"
+        "name": "metric_IO_bandwidth_disk_or_network_writes (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_ITOM] + [UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR]) * 64 * 8E-9) / 1"
     },
     {
         "name": "metric_TMA_Frontend_Bound(%)",
