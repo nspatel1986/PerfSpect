@@ -142,16 +142,16 @@
         "expression": "(([OCR.READS_TO_CORE.REMOTE_DRAM] + [OCR.HWPF_L3.REMOTE]) * 64 / 1000000) / 1"
     },
     {
-        "name": "metric_memory bandwidth read (MB/sec)",
-        "expression": "([UNC_M_CAS_COUNT.RD] * 64 / 1000000) / 1"
+        "name": "metric_memory bandwidth read (Gbps)",
+        "expression": "([UNC_M_CAS_COUNT.RD] * 64 * 8E-9) / 1"
     },
     {
-        "name": "metric_memory bandwidth write (MB/sec)",
-        "expression": "([UNC_M_CAS_COUNT.WR] * 64 / 1000000) / 1"
+        "name": "metric_memory bandwidth write (Gbps)",
+        "expression": "([UNC_M_CAS_COUNT.WR] * 64 * 8E-9) / 1"
     },
     {
-        "name": "metric_memory bandwidth total (MB/sec)",
-        "expression": "(([UNC_M_CAS_COUNT.RD] + [UNC_M_CAS_COUNT.WR]) * 64 / 1000000) / 1"
+        "name": "metric_memory bandwidth total (Gbps)",
+        "expression": "(([UNC_M_CAS_COUNT.RD] + [UNC_M_CAS_COUNT.WR]) * 64 * 8E-9) / 1"
     },
     {
         "name": "metric_LLC code read MPI (demand+prefetch)",
