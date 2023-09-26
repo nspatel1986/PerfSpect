@@ -146,7 +146,8 @@ def supports_psi():
     psi = []
     for resource in ["cpu", "memory", "io"]:
         try:
-            with open("/proc/pressure/" + resource) as _:
+            with open("/proc/pressure/" + resource) as f:
+                f.readline()
                 psi.append(resource)
         except Exception:
             pass
