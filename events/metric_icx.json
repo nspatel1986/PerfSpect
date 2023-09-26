@@ -154,6 +154,50 @@
         "expression": "(([UNC_M_CAS_COUNT.RD] + [UNC_M_CAS_COUNT.WR]) * 64 * 8E-9) / 1"
     },
     {
+        "name": "metric_IO_bandwidth_reads (Gbps)",
+        "expression": "([UNC_CHA_TOR_INSERTS.IO_PCIRDCUR] * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_read_hits (Gbps)",
+        "expression": "([UNC_CHA_TOR_INSERTS.IO_HIT_PCIRDCUR] * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_read_miss (Gbps)",
+        "expression": "([UNC_CHA_TOR_INSERTS.IO_MISS_PCIRDCUR] * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_writes (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_ITOM] + [UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_write_hits (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_HIT_ITOM] + [UNC_CHA_TOR_INSERTS.IO_HIT_ITOMCACHENEAR]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_write_miss (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_MISS_ITOM] + [UNC_CHA_TOR_INSERTS.IO_MISS_ITOMCACHENEAR]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_hits (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_HIT]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_miss (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_MISS]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_WbMtoI (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_WBMTOI]) * 64 * 8E-9) / 1"
+    },
+    {
+        "name": "metric_IO_bandwidth_RFO (Gbps)",
+        "expression": "(([UNC_CHA_TOR_INSERTS.IO_RFO]) * 64 * 8E-9) / 1"
+    },
+    {
         "name": "metric_LLC code read MPI (demand+prefetch)",
         "name-txn": "metric_LLC code read (demand+prefetch) misses per txn",
         "expression": "([UNC_CHA_TOR_INSERTS.IA_MISS_CRD] + [UNC_CHA_TOR_INSERTS.IA_MISS_CRD_PREF]) / [instructions]",

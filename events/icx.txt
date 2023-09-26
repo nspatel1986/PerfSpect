@@ -179,20 +179,40 @@ upi/event=0x2,umask=0xf,name='UNC_UPI_TxL_FLITS.ALL_DATA'/;
 # CHA events
 cha/event=0x00,umask=0x00,name='UNC_CHA_CLOCKTICKS'/;
 
-cha/event=0x35,umask=0xC8177E01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE'/,
-cha/event=0x35,umask=0xC816FE01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL'/,
-cha/event=0x35,umask=0xC896FE01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL'/,
-cha/event=0x35,umask=0xC8977E01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE'/;
+#cha/event=0x35,umask=0xC8177E01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE'/,
+#cha/event=0x35,umask=0xC816FE01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL'/,
+#cha/event=0x35,umask=0xC896FE01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL'/,
+#cha/event=0x35,umask=0xC8977E01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE'/;
 
-cha/event=0x36,umask=0xc8177e01,name='UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE'/;
-cha/event=0x35,umask=0xc88ffe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_CRD_PREF'/,
-cha/event=0x35,umask=0xc80ffe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_CRD'/,
-cha/event=0x36,umask=0xC816FE01,name='UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL'/;
+#cha/event=0x36,umask=0xc8177e01,name='UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE'/;
+#cha/event=0x35,umask=0xc88ffe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_CRD_PREF'/,
+#cha/event=0x35,umask=0xc80ffe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_CRD'/,
+#cha/event=0x36,umask=0xC816FE01,name='UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL'/;
 
-cha/event=0x35,umask=0xccd7fe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDRD'/,
-cha/event=0x35,umask=0xc817fe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD'/,
-cha/event=0x35,umask=0xc897fe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF'/,
-cha/event=0x36,umask=0xC817FE01,name='UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD'/;
+#cha/event=0x35,umask=0xccd7fe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDRD'/,
+#cha/event=0x35,umask=0xc817fe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD'/,
+#cha/event=0x35,umask=0xc897fe01,name='UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF'/,
+#cha/event=0x36,umask=0xC817FE01,name='UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD'/;
+
+#CHA (IO Bandwidth)
+cha/event=0x35,umask=0xC001FF04,name='UNC_CHA_TOR_INSERTS.IO'/,
+cha/event=0x35,umask=0xC001FD04,name='UNC_CHA_TOR_INSERTS.IO_HIT'/,
+cha/event=0x35,umask=0xC001FE04,name='UNC_CHA_TOR_INSERTS.IO_MISS'/;
+
+cha/event=0x35,umask=0xCC23FF04,name='UNC_CHA_TOR_INSERTS.IO_WBMTOI'/,
+cha/event=0x35,umask=0xC803FF04,name='UNC_CHA_TOR_INSERTS.IO_RFO'/;
+
+cha/event=0x35,umask=0xC8F3FF04,name='UNC_CHA_TOR_INSERTS.IO_PCIRDCUR'/,
+cha/event=0x35,umask=0xCC43FF04,name='UNC_CHA_TOR_INSERTS.IO_ITOM'/,
+cha/event=0x35,umask=0xCD43FF04,name='UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR'/;
+
+cha/event=0x35,umask=0xC8F3FD04,name='UNC_CHA_TOR_INSERTS.IO_HIT_PCIRDCUR'/,
+cha/event=0x35,umask=0xCC43FD04,name='UNC_CHA_TOR_INSERTS.IO_HIT_ITOM'/,
+cha/event=0x35,umask=0xCD43FD04,name='UNC_CHA_TOR_INSERTS.IO_HIT_ITOMCACHENEAR'/;
+
+cha/event=0x35,umask=0xC8F3FE04,name='UNC_CHA_TOR_INSERTS.IO_MISS_PCIRDCUR'/,
+cha/event=0x35,umask=0xCC43FE04,name='UNC_CHA_TOR_INSERTS.IO_MISS_ITOM'/,
+cha/event=0x35,umask=0xCD43FE04,name='UNC_CHA_TOR_INSERTS.IO_MISS_ITOMCACHENEAR'/;
 
 #memory read/writes
 imc/event=0x04,umask=0x0f,name='UNC_M_CAS_COUNT.RD'/,
